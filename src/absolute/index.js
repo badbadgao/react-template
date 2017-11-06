@@ -1,0 +1,1 @@
+export const ABSOLUTE_PATE = 'war/src';

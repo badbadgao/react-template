@@ -1,11 +1,15 @@
 var path = require('path');
 
 module.exports = {
- entry: path.resolve(__dirname, 'war/src/index.js'),
- output: { path: path.resolve(__dirname, 'war/release/'), filename: 'index.js' },
+ entry: path.resolve(__dirname, 'src/index.js'),
+ output: { path: path.resolve(__dirname, 'release/'), filename: 'index.js' },
  resolve: {
    extensions: ['*', '.js', '.jsx', '.css'],
    symlinks: false,
+   modules: [
+     path.resolve('./src/'),
+     path.resolve('./node_modules/'),
+   ],
  },
  module: {
    loaders: [
